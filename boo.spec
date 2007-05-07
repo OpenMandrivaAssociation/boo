@@ -6,11 +6,12 @@
 %endif
 Summary:		A wrist friendly language for the CLI/Mono
 Name:			boo
-Version: 0.7.6.2237
-Release: 		%mkrel 4
+Version: 0.7.7.2475
+Release: 		%mkrel 1
 License:		BSD
 Group:			Development/Other
 Source0:		http://dist.codehaus.org/boo/distributions/boo-%{version}-src.tar.bz2
+Patch: boo-0.7.7.2475-novs2005.patch
 URL:			http://boo.codehaus.org/
 BuildRoot:		%{_tmppath}/%{name}-%{version}-buildroot
 Requires:	mono
@@ -28,7 +29,8 @@ the Common Language Infrastructure with a python inspired syntax and
 a special focus on language and compiler extensibility.
 
 %prep
-%setup -q
+%setup -q -c
+%patch -p1
 perl -pi -e 's/\r//' $(find examples/ -type f )
 
 %build
