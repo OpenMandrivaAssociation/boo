@@ -6,7 +6,7 @@
 %endif
 Summary:		A wrist friendly language for the CLI/Mono
 Name:			boo
-Version: 0.7.7.2475
+Version: 0.7.8.2559
 Release: 		%mkrel 1
 License:		BSD
 Group:			Development/Other
