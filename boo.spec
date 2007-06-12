@@ -12,13 +12,14 @@ License:		BSD
 Group:			Development/Other
 Source0:		http://dist.codehaus.org/boo/distributions/boo-%{version}-src.tar.bz2
 Patch: boo-0.7.7.2475-novs2005.patch
+Patch1: boo-0.7.8.2559-gtksourceview2.patch
 URL:			http://boo.codehaus.org/
 BuildRoot:		%{_tmppath}/%{name}-%{version}-buildroot
 Requires:	mono
 BuildRequires:	nant
 BuildRequires:	shared-mime-info
 #gw for the boo.lang location
-BuildRequires:  libgtksourceview-devel
+BuildRequires:  libgtksourceview-devel >= 1.90
 Requires(post): shared-mime-info
 Requires(postun): shared-mime-info
 BuildArch:		noarch
@@ -30,7 +31,8 @@ a special focus on language and compiler extensibility.
 
 %prep
 %setup -q -c
-%patch -p1
+%patch -p1 -b .novs2005
+%patch1 -p1
 perl -pi -e 's/\r//' $(find examples/ -type f )
 
 %build
