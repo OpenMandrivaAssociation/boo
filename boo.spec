@@ -6,7 +6,7 @@
 %endif
 Summary:		A wrist friendly language for the CLI/Mono
 Name:			boo
-Version: 0.7.8.2559
+Version: 0.7.9.2659
 Release: 		%mkrel 1
 License:		BSD
 Group:			Development/Other
@@ -20,6 +20,7 @@ BuildRequires:	nant
 BuildRequires:	shared-mime-info
 #gw for the boo.lang location
 BuildRequires:  libgtksourceview-devel >= 1.90
+BuildConflicts: boo < %version
 Requires(post): shared-mime-info
 Requires(postun): shared-mime-info
 BuildArch:		noarch
