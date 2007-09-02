@@ -7,12 +7,13 @@
 Summary:		A wrist friendly language for the CLI/Mono
 Name:			boo
 Version: 0.7.9.2659
-Release: 		%mkrel 1
+Release: 		%mkrel 2
 License:		BSD
 Group:			Development/Other
 Source0:		http://dist.codehaus.org/boo/distributions/boo-%{version}-src.tar.bz2
 Patch: boo-0.7.7.2475-novs2005.patch
 Patch1: boo-0.7.8.2559-gtksourceview2.patch
+Patch2: boo-0.7.9.2659-pkgconfig.patch
 URL:			http://boo.codehaus.org/
 BuildRoot:		%{_tmppath}/%{name}-%{version}-buildroot
 Requires:	mono
@@ -34,6 +35,7 @@ a special focus on language and compiler extensibility.
 %setup -q -c
 %patch -p1 -b .novs2005
 %patch1 -p1
+%patch2 -p1
 perl -pi -e 's/\r//' $(find examples/ -type f )
 
 %build
