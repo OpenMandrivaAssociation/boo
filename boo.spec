@@ -17,7 +17,6 @@ Patch: boo-0.7.7.2475-novs2005.patch
 Patch1: boo-0.7.8.2559-gtksourceview2.patch
 Patch2: boo-0.7.9.2659-pkgconfig.patch
 URL:			http://boo.codehaus.org/
-BuildRoot:		%{_tmppath}/%{name}-%{version}-buildroot
 Requires:	mono
 BuildRequires:	nant
 BuildRequires:	shared-mime-info
