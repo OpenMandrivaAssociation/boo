@@ -1,5 +1,5 @@
-%define version 0.8.0
-%define svn 2730
+%define version 0.8.1
+%define svn 2865
 %define monodir %_prefix/lib
 %if %mdkversion >= 200600
 %define pkgconfigdir %_datadir/pkgconfig
@@ -9,11 +9,11 @@
 Summary:		A wrist friendly language for the CLI/Mono
 Name:			boo
 Version: %version
-Release: 		%mkrel 2
+Release: 		%mkrel 1
 License:		BSD
 Group:			Development/Other
 Source0:		http://dist.codehaus.org/boo/distributions/boo-%{version}.%svn-src.zip
-Patch: boo-0.7.7.2475-novs2005.patch
+Patch: boo-0.8.1-novs2005.patch
 Patch1: boo-0.7.8.2559-gtksourceview2.patch
 Patch2: boo-0.7.9.2659-pkgconfig.patch
 URL:			http://boo.codehaus.org/
