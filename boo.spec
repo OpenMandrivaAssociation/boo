@@ -9,7 +9,7 @@
 Summary:		A wrist friendly language for the CLI/Mono
 Name:			boo
 Version: %version
-Release: 		%mkrel 1
+Release: 		%mkrel 2
 License:		BSD
 Group:			Development/Other
 Source0:		http://dist.codehaus.org/boo/distributions/boo-%{version}.%svn-src.zip
@@ -33,6 +33,16 @@ Boo is a new object oriented statically typed programming language for
 the Common Language Infrastructure with a python inspired syntax and
 a special focus on language and compiler extensibility.
 
+%package nant
+Summary: Nant task for building boo programs
+Group: Development/Other
+
+%description nant
+Boo is a new object oriented statically typed programming language for
+the Common Language Infrastructure with a python inspired syntax and
+a special focus on language and compiler extensibility.
+
+This is a Nant task for building boo sources.
 %prep
 %setup -q -c
 %patch -p1 -b .novs2005
@@ -77,9 +87,12 @@ rm -rf $RPM_BUILD_ROOT
 %monodir/mono/boo/
 %monodir/boo/
 %monodir/mono/gac/Boo*
-%_datadir/NAnt/bin/Boo.NAnt.Tasks.dll
 %{_datadir}/mime/packages/boo-mime-info.xml
 %{_datadir}/mime-info/boo.*
 %pkgconfigdir/boo.pc
+
+%files nant
+%defattr(-, root, root)
+%_datadir/NAnt/bin/Boo.NAnt.Tasks.dll
 
 
