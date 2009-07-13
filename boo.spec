@@ -1,5 +1,5 @@
-%define version 0.9.0
-%define svn 3203
+%define version 0.9.1
+%define svn 3287
 %define monodir %_prefix/lib
 %if %mdkversion >= 200600
 %define pkgconfigdir %_datadir/pkgconfig
@@ -13,7 +13,7 @@ Release: 		%mkrel 1
 License:		BSD
 Group:			Development/Other
 Source0:		http://dist.codehaus.org/boo/distributions/boo-%{version}.%svn-src.zip
-Patch: boo-0.9.0-no-vs2005.patch
+Patch: boo-0.9.1-novs2005.patch
 Patch1: boo-0.7.8.2559-gtksourceview2.patch
 Patch2: boo-0.7.9.2659-pkgconfig.patch
 URL:			http://boo.codehaus.org/
