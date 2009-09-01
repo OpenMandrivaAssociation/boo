@@ -1,5 +1,5 @@
-%define version 0.9.1
-%define svn 3287
+%define version 0.9.2
+%define svn 3383
 %define monodir %_prefix/lib
 %if %mdkversion >= 200600
 %define pkgconfigdir %_datadir/pkgconfig
