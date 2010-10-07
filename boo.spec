@@ -1,5 +1,5 @@
-%define version 0.9.2
-%define svn 3383
+%define version 0.9.3
+%define svn 3457
 %define monodir %_prefix/lib
 %if %mdkversion >= 200600
 %define pkgconfigdir %_datadir/pkgconfig
@@ -9,14 +9,13 @@
 Summary:		A wrist friendly language for the CLI/Mono
 Name:			boo
 Version: %version
-Release: 		%mkrel 3
+Release: 		%mkrel 1
 License:		BSD
 Group:			Development/Other
 Source0:		http://dist.codehaus.org/boo/distributions/boo-%{version}.%svn-src.zip
 Patch: boo-0.9.1-novs2005.patch
 Patch1: boo-0.7.8.2559-gtksourceview2.patch
 Patch2: boo-0.7.9.2659-pkgconfig.patch
-Patch3: boo-0.9.2-fix-wrappers.patch
 URL:			http://boo.codehaus.org/
 BuildRoot:		%{_tmppath}/%{name}-%{version}-buildroot
 Requires:	mono
@@ -49,7 +48,6 @@ This is a Nant task for building boo sources.
 %patch -p1 -b .novs2005
 %patch1 -p1
 %patch2 -p1
-%patch3 -p1
 perl -pi -e 's/\r//' $(find examples/ -type f )
 
 %build
