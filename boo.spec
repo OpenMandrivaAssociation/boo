@@ -41,7 +41,7 @@ This is a Nant task for building boo sources.
 nant -nologo -D:install.prefix=%_prefix
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 nant -nologo install -D:install.prefix=%_prefix -D:install.destdir=%buildroot
 
 rm -f %buildroot%{_datadir}/mime-info/boo.*
@@ -53,7 +53,7 @@ mv %buildroot%_prefix/lib/pkgconfig %buildroot%_datadir/pkgconfig
 rm -rf %buildroot%_datadir/gtksourceview*
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-, root, root)
