@@ -5,10 +5,10 @@ Release:	2
 License:	BSD
 Group:		Development/Other
 Url:		http://boo.codehaus.org/
-Source0:	http://dist.codehaus.org/boo/distributions/boo-%{version}-src.tar.bz2
+Source0:	http://dist.codehaus.org/boo/distributions/%{name}-%{version}-src.tar.bz2
 Patch0:		boo-gtksourceview.patch
 Patch1:		boo-pkgconfig_path_fix.patch
-BuildArch: noarch
+BuildArch:	noarch
 
 BuildRequires:	nant
 BuildRequires:	shared-mime-info
@@ -24,7 +24,7 @@ a special focus on language and compiler extensibility.
 Summary:	Nant task for building boo programs
 Group:		Development/Other
 
-%description nant
+%description	nant
 Boo is a new object oriented statically typed programming language for
 the Common Language Infrastructure with a python inspired syntax and
 a special focus on language and compiler extensibility.
@@ -36,15 +36,15 @@ This is a Nant task for building boo sources.
 %apply_patches
 
 %build
-nant -nologo -D:install.prefix=%_prefix
+nant -nologo -D:install.prefix=%{_prefix}
 
 %install
-nant -nologo install -D:install.prefix=%_prefix -D:install.destdir=%{buildroot}
+nant -nologo install -D:install.prefix=%{_prefix} -D:install.destdir=%{buildroot}
 
 rm -f %{buildroot}%{_datadir}/mime-info/boo.*
 
 #gw fix pkgconfig location
-mv %{buildroot}%_prefix/lib/pkgconfig %{buildroot}%{_datadir}/pkgconfig
+mv %{buildroot}%{_prefix}/lib/pkgconfig %{buildroot}%{_datadir}/pkgconfig
 
 rm -rf %{buildroot}%{_datadir}/gtksourceview*
 
