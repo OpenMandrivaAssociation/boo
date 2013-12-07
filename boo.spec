@@ -1,7 +1,7 @@
 Summary:	A wrist friendly language for the CLI/Mono
 Name:		boo
 Version:	0.9.4.9
-Release:	2
+Release:	3
 License:	BSD
 Group:		Development/Other
 Url:		http://boo.codehaus.org/
