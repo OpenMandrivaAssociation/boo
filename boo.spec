@@ -13,6 +13,7 @@ BuildArch:	noarch
 BuildRequires:	nant
 BuildRequires:	shared-mime-info
 BuildRequires:	pkgconfig(gtksourceview-2.0)
+BuildRequires:	mono
 Requires:	mono
 
 %description
