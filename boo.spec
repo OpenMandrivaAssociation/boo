@@ -6,6 +6,7 @@ License:	BSD
 Group:		Development/Other
 Url:		http://boo.codehaus.org/
 Source0:	http://dist.codehaus.org/boo/distributions/%{name}-%{version}-src.tar.bz2
+Source100:  %{name}.rpmlintrc
 Patch0:		boo-gtksourceview.patch
 Patch1:		boo-pkgconfig_path_fix.patch
 BuildArch:	noarch
