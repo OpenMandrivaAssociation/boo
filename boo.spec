@@ -14,6 +14,7 @@ BuildRequires:	nant
 BuildRequires:	shared-mime-info
 BuildRequires:	pkgconfig(gtksourceview-2.0)
 BuildRequires:	mono
+BuildRequires:	pkgconfig(mono)
 Requires:	mono
 
 %description
