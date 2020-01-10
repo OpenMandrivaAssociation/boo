@@ -37,7 +37,7 @@ This is a Nant task for building boo sources.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 nant -nologo -D:install.prefix=%{_prefix}
