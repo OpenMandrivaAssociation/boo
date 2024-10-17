@@ -4,7 +4,7 @@ Version:	0.9.4.9
 Release:	12
 License:	BSD
 Group:		Development/Other
-Url:		http://boo.codehaus.org/
+Url:		https://boo.codehaus.org/
 Source0:	http://dist.codehaus.org/boo/distributions/%{name}-%{version}-src.tar.bz2
 Source100:  %{name}.rpmlintrc
 Patch0:		boo-gtksourceview.patch
